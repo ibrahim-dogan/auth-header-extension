@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auth Header Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Auth Header Manager</h1>
+
+        <!-- Extension toggle switch -->
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="extensionToggle">
+                <span class="slider round"></span>
+            </label>
+            <span id="statusText">Disabled</span>
+        </div>
+
+        <!-- Header management section -->
+        <div id="headers-container">
+            <h2>Headers</h2>
+            <div id="headers-list"></div>
+
+            <!-- Add header form -->
+            <div class="add-header-form">
+                <input type="text" id="headerName" placeholder="Header Name (e.g., Authorization)">
+                <input type="text" id="headerValue" placeholder="Header Value (e.g., Bearer token123)">
+
+                <!-- Secret checkbox -->
+                <label for="headerSecret" class="secret-checkbox">
+                    <input type="checkbox" id="headerSecret"> Secret
+                </label>
+
+                <button id="addHeader">Add Header</button>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
